@@ -1,0 +1,171 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Hobby: Basketball</title>
+    <link rel="stylesheet" href="hobby.css">
+</head>
+<body>
+
+    <div class="nav-container">
+        <a href="index.html" class="back-link">Back to Resume</a>
+        <nav>
+            <a href="#stats-section">Jump to Advanced Stats</a>
+        </nav>
+        <h1>My Love for Basketball</h1>
+    </div>
+
+    <div class="main-content">
+        <h2>How it Began</h2>
+        <p>As a kid my dad would always watch BYU and Jazz basketball games, which sparked my interest and love for the game.<br>Ever since my dad bought our first hoop when I was a kid, I'd spend hours out on the driveway practicing my shot,<br> and playing with friends. Basketball has since become my favorite hobby, my relaxation technique, and the best pastime.</p>
+        
+        <ol>
+            <li><strong>My Favorite Teams</strong>
+                <ul>
+                    <li>Utah Jazz</li>
+                    <li>BYU Basketball</li>
+                </ul>
+            </li>
+            <li><strong>Favorite Players</strong>
+                <ul>
+                    <li>AJ Dybantsa</li>
+                    <li>Deaaron Fox</li>
+                    <li>Ja Morant</li>
+                    <li>Mike Conley</li>
+                    <li>Tyrese Haliburton</li>
+                    <li>Victor Wembanyama</li>
+                </ul>
+            </li>
+        </ol>
+
+        <img src="C:\Users\tyjne\Downloads\IMG_1784.JPEG" width="700">
+
+        <h3>AJ Dybantsa 2025 BYU Highlights</h3>
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube.com/watch?v=maqKVp4uD48&pp=ygUlYnl1IDIwMjUgc2Vhc29uIGJhc2tldGJhbGwgaGlnaGxpZ2h0cw%3D%3D" 
+                title="AJ Dybantsa highlights" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="analytics-block" id="stats-section">
+        <h2>Basketball by the Numbers</h2>
+        <p>Modern basketball is driven by data. Below is a live look at player performance metrics.</p>
+
+    <iframe src="https://viziball.app/content/ranking/nba/en/1/player/20260404/20260412/pie/1/10/avg/DESC/0/48/0/100/all/all" width="1105" height="1098"></iframe>    </div>
+<div class="game-container" id="generator-game">
+    <h2>NBA Finals Champion Generator</h2>
+    <p>Who will hoist the Larry O'Brien trophy? Click to simulate the season!</p>
+    
+    <div class="game-display">
+        <span id="placeholder-text">?</span>
+        <img id="champion-image" src="" alt="NBA Champion Logo">
+    </div>
+    
+    <button id="generate-btn">Generate Champion</button>
+
+    <style>
+        .game-container {
+            max-width: 500px;
+            margin: 40px auto;
+            text-align: center;
+            padding: 30px;
+            background: #ffffff;
+            border: 3px solid #e65100; /* NBA Orange */
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            font-family: Arial, sans-serif;
+        }
+
+        .game-display {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            background: #f9f9f9;
+            border-radius: 10px;
+            border: 1px inset #ddd;
+        }
+
+        #placeholder-text {
+            font-size: 80px;
+            font-weight: bold;
+            color: #ddd;
+        }
+
+        #champion-image {
+            max-width: 180px;
+            max-height: 180px;
+            display: none; /* Hidden until button is clicked */
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        #generate-btn {
+            background: #e65100;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        #generate-btn:hover {
+            background: #bf360c;
+            transform: scale(1.05);
+        }
+
+        #generate-btn:active {
+            transform: scale(0.95);
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+
+    <script>
+        // Array of objects containing team names and their official logo URLs
+        const nbaTeams = [
+            { name: "Celtics", img: "https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Boston_Celtics.svg/200px-Boston_Celtics.svg.png" },
+            { name: "Lakers", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/200px-Los_Angeles_Lakers_logo.svg.png" },
+            { name: "Warriors", img: "https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Golden_State_Warriors_logo.svg/200px-Golden_State_Warriors_logo.svg.png" },
+            { name: "Nuggets", img: "https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Denver_Nuggets.svg/200px-Denver_Nuggets.svg.png" },
+            { name: "Bucks", img: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Milwaukee_Bucks_logo.svg/200px-Milwaukee_Bucks_logo.svg.png" },
+            { name: "Suns", img: "https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/Phoenix_Suns_logo.svg/200px-Phoenix_Suns_logo.svg.png" }
+        ];
+
+        const btn = document.getElementById('generate-btn');
+        const img = document.getElementById('champion-image');
+        const placeholder = document.getElementById('placeholder-text');
+
+        btn.addEventListener('click', function() {
+            // Pick a random team from the list
+            const randomTeam = nbaTeams[Math.floor(Math.random() * nbaTeams.length)];
+            
+            // Update the image source and show it
+            img.src = randomTeam.img;
+            img.style.display = "block";
+            
+            // Hide the "?" placeholder
+            placeholder.style.display = "none";
+            
+            // Optional: change the button text after the first click
+            btn.textContent = "Simulate Again";
+        });
+    </script>
+</div>
+    <footer>
+        <p>&copy; 2026 Basketball Scratch Page</p>
+    </footer>
+
+</body>
+</html>

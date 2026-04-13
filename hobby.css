@@ -1,0 +1,89 @@
+body {
+    background-color: #dedcda; 
+    margin: 0;
+    padding: 0;
+    /* Font Family Requirement */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #443322; /* Font Color Requirement */
+}
+
+/* Div 1: Nav/Header Styling */
+.nav-container {
+    background-color: #767677;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.nav-container a {
+    color: #fcfbfb;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    text-align: left;
+}
+
+.back-link {
+    display: block;
+    margin-bottom: 20px !important;
+    font-size: 0.9em;
+}
+
+/* Div 2: Main Content Layout */
+.main-content {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+h1, h2, h3 {
+    color: #000000; /* Font Color for headings */
+    font-family: 'Georgia', serif; /* Second Font Family */
+}
+
+.feature-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* YouTube Video Positioning */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin: 20px 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Div 3: Analytics/Tableau Block */
+.analytics-block {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    border-top: 4px solid #e65100;
+}
+
+.tableau-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.8em;
+    color: #888;
+}
